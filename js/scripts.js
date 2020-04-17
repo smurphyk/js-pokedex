@@ -24,6 +24,10 @@ var pokemonList = [
     abilities: ['Keen-Eye', 'Tangled-Feet', 'Big-Pecks'],
   },
 ];
+
 for (var i = 0; i < pokemonList.length; i++) {
-  document.write(pokemonList[i].name);
+  document.write('<h1>' + pokemonList[i].name + '</h1>' + '<h2>' + ' Height: ' + pokemonList[i].height)
+    if (pokemonList[i].height > 1.1) {
+      document.write(" - Wow, that's BIG! ")
+    }
 }
