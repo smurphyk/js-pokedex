@@ -25,9 +25,13 @@ var pokemonList = [
   },
 ];
 
-for (var i = 0; i < pokemonList.length; i++) {
+/* for (var i = 0; i < pokemonList.length; i++) {
   document.write('<h1>' + pokemonList[i].name + '</h1>' + '<h2>' + ' Height: ' + pokemonList[i].height)
     if (pokemonList[i].height > 1.1) {
       document.write(" - Wow, that's BIG! ")
     }
-}
+}; */
+
+pokemonList.forEach(function(pokemon) {
+  document.write('<h1>' + pokemon.name + '</h1>' + '<h2>' + ' Height: ' + pokemon.height +'m');
+});
