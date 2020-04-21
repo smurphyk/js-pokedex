@@ -34,4 +34,10 @@ var pokemonList = [
 
 pokemonList.forEach(function(pokemon) {
   document.write('<h1>' + pokemon.name + '</h1>' + '<h2>' + ' Height: ' + pokemon.height +'m');
+  if (pokemon.height > 1.1) {
+    document.write(" - Wow, that's BIG! ")
+  }else{
+    var result = pokemon;
+    return result;
+  }
 });
