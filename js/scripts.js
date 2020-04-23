@@ -40,12 +40,7 @@ var pokemonRepository = (function() {
     };
   })();
 
-/*pokemonList.forEach(function(pokemon) {
-  document.write('<h1>' + pokemon.name + '</h1>' + '<h2>' + ' Height: ' + pokemon.height +'m');
-  if (pokemon.height > 1.1) {
-    document.write(" - Wow, that's BIG! ")
-  }else{
-    var result = pokemon;
-    return result;
-  }
-});*/
+
+  for(var i = 0; i <= pokemonRepository.getAll().length; i++) {
+   document.write('<h1>' + pokemonRepository.getAll(i).name + '</h1>' + '<h2>' + ' Height: ' + pokemonRepository.getAll(i).height +'m');
+ };
