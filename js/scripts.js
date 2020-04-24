@@ -41,11 +41,10 @@ var pokemonRepository = (function() {
   })();
 
 pokemonRepository.getAll().forEach(function pokemon(property) {
-  pokemonRepository.add(property.name);
-  pokemonRepository.add(property.height);
+  pokemonRepository.add('<h1>' + property.name + '</h1>');
+  pokemonRepository.add('<h3>' + 'Height: ' + property.height + 'm' +'</h3>');
 });
-document.write(pokemon(property));
-document.write('<h1>' + pokemonRepository.getAll()[4] + '</h1>' + '<h3>' + 'Height:' + pokemonRepository.getAll()[5] + '</h3>');
-document.write('<h1>' + pokemonRepository.getAll()[6] + '</h1>' + '<h3>' + 'Height:' + pokemonRepository.getAll()[7] + '</h3>');
-document.write('<h1>' + pokemonRepository.getAll()[8] + '</h1>' + '<h3>' + 'Height:' + pokemonRepository.getAll()[9] + '</h3>');
-document.write('<h1>' + pokemonRepository.getAll()[10] + '</h1>' + '<h3>' + 'Height:' + pokemonRepository.getAll()[11] + '</h3>');
+
+for(var i = 4; i < pokemonRepository.getAll().length; i++) {
+  document.write(pokemonRepository.getAll()[i]);
+};
