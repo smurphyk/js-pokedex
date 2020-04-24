@@ -40,7 +40,12 @@ var pokemonRepository = (function() {
     };
   })();
 
-
-  for(var i = 0; i <= pokemonRepository.getAll().length; i++) {
-   document.write('<h1>' + pokemonRepository.getAll(i).name + '</h1>' + '<h2>' + ' Height: ' + pokemonRepository.getAll(i).height +'m');
- };
+pokemonRepository.getAll().forEach(function pokemon(property) {
+  pokemonRepository.add(property.name);
+  pokemonRepository.add(property.height);
+});
+document.write(pokemon(property));
+document.write('<h1>' + pokemonRepository.getAll()[4] + '</h1>' + '<h3>' + 'Height:' + pokemonRepository.getAll()[5] + '</h3>');
+document.write('<h1>' + pokemonRepository.getAll()[6] + '</h1>' + '<h3>' + 'Height:' + pokemonRepository.getAll()[7] + '</h3>');
+document.write('<h1>' + pokemonRepository.getAll()[8] + '</h1>' + '<h3>' + 'Height:' + pokemonRepository.getAll()[9] + '</h3>');
+document.write('<h1>' + pokemonRepository.getAll()[10] + '</h1>' + '<h3>' + 'Height:' + pokemonRepository.getAll()[11] + '</h3>');
