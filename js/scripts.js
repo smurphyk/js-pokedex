@@ -42,7 +42,11 @@ var pokemonRepository = (function() {
 
 pokemonRepository.getAll().forEach(function pokemon(property) {
   pokemonRepository.add('<h1>' + property.name + '</h1>');
-  pokemonRepository.add('<h3>' + 'Height: ' + property.height + 'm' +'</h3>');
+  if(property.height <= 1.1) {
+    pokemonRepository.add('<h3>' + 'Height: ' + property.height + 'm' +'</h3>');
+  }else{
+    pokemonRepository.add('<h3>' + 'Height: ' + property.height + 'm' + " - Wow, that's BIG!" + '</h3>');
+  }
 });
 
 for(var i = 4; i < pokemonRepository.getAll().length; i++) {
