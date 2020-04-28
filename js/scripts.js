@@ -34,21 +34,32 @@ var pokemonRepository = (function() {
     return pokemonList;
   }
 
+  function addListItem(pokemon) {
+    var pList = document.querySelector('.pokeList');
+    var pokeItem = document.createElement('li');
+    var button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('pokeButton');
+    pokeItem.appendChild(button);
+    pList.appendChild(pokeItem);
+  }
+
   return {
       add: add,
-      getAll: getAll
+      getAll: getAll,
+      addListItem: addListItem
     };
   })();
 
-pokemonRepository.getAll().forEach(function pokemon(property) {
-  pokemonRepository.add('<h1>' + property.name + '</h1>');
-  if(property.height <= 1.1) {
-    pokemonRepository.add('<h3>' + 'Height: ' + property.height + 'm' +'</h3>');
-  }else{
-    pokemonRepository.add('<h3>' + 'Height: ' + property.height + 'm' + " - Wow, that's BIG!" + '</h3>');
-  }
-});
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+ });
 
-for(var i = 4; i < pokemonRepository.getAll().length; i++) {
-  document.write(pokemonRepository.getAll()[i]);
-};
+
+/* console.log(property)
+ if(property.height>1.1) {
+   document.write('<h1>' + property.name + '</h1>' + '<h3>' + 'Height:' + property.height + "- WOW! That's BIG!" + '</h3>' + '<hr/>')
+ } else {
+   document.write('<h1>' + property.name + '</h1>' + '<h3>' + 'Height:' + property.height + '</h3>' + '<hr/>')
+ };
+*/
