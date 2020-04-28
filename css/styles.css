@@ -1,60 +1,21 @@
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 .pokeList {
   width: 30%;
-  min-width: 450px;
   display: inline-block;
   list-style-type: none;
-  padding: 2%;
-  border: 3px groove #e31010;
-  text-align: center;
+  border: 5px solid #157cd1;
+  padding: 3%;
 }
 
 button.pokeButton {
   margin: 9px;
   padding: 10px;
   width: 75%;
-  min-width: 75%;
   height: 50px;
-  font-size: 150%;
-  border: none;
-  border-radius: 40%;
-  background-color: #157cd1;
-}
-
-.pokeItem {
-  margin: 0 auto;
+  border: 1.5px groove #e31010;
+  border-radius: 35%;
+  font-size: 25px;
 }
 
 h1 {
-  display: inline-block;
-  margin: 0 auto 3% auto;
-}
-
-@media all and (max-width: 750px) {
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-}
-
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .grid {
-    -ms-grid-columns: 1fr 10px 1fr;
-    grid-template-columns: 1fr;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
+  margin: 3px auto 45px auto;
 }
