@@ -1,0 +1,21 @@
+.pokeList {
+  width: 30%;
+  display: inline-block;
+  list-style-type: none;
+  border: 5px solid #157cd1;
+  padding: 3%;
+}
+
+button.pokeButton {
+  margin: 9px;
+  padding: 10px;
+  width: 75%;
+  height: 50px;
+  border: 1.5px groove #e31010;
+  border-radius: 35%;
+  font-size: 25px;
+}
+
+h1 {
+  margin: 3px auto 45px auto;
+}
