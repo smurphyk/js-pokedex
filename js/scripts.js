@@ -46,8 +46,8 @@ var pokemonRepository = (function() {
     button.classList.add('pokeButton');
     pokeItem.appendChild(button);
     pList.appendChild(pokeItem);
-    button.addEventListener('click' , function showDetails(pokemon) {
-      pokemonRepository.showDetails(button.innerText);
+    button.addEventListener('click' , function () {
+      showDetails(pokemon);
     });
   }
 
