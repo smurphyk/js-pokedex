@@ -20,8 +20,9 @@ button.pokeButton {
   min-width: 75%;
   height: 50px;
   font-size: 150%;
+  font-variant: small-caps;
   border: none;
-  border-radius: 40%;
+  border-radius: 5px;
   background-color: #157cd1;
 }
 
@@ -30,7 +31,7 @@ button.pokeButton {
 }
 
 h1 {
-  display: inline-block;
+  display: block;
   margin: 0 auto 3% auto;
 }
 
